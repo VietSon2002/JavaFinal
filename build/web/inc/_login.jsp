@@ -6,7 +6,7 @@
           <div class="card-body p-5 text-center">
               <form action="" method="post">
             <h3 class="mb-5 text-start">Sign in</h3>
-            <h1 style="padding: 30px 0 30px 0;">
+            <h1 style="padding: 10px 0 10px 0;">
                 <div class="link-danger">${error_login}</div></h1>
             <div class="mb-4 text-start">
               <label for="typeEmailX-2" class="form-label text-start">Email</label>

@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>${product.name}</h6>
-                                    <h5>${product.price}00 VN?</h5>
+                                    <h5>${product.price}00 VND</h5>
                                     <div class="product__item__heart"><i class="fa fa-heart"></i></div>
                                 </div>
                             </div>

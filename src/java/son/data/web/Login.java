@@ -32,7 +32,7 @@ public class Login extends HttpServlet {
                User user= Database.getUserDao().findUser(email, password);
                if(user==null){
                    request.getSession().setAttribute( "error_login", "You information is incorrect!");
-                   response.sendRedirect("home");
+                   response.sendRedirect("login");
                }else 
                      if(user.getRole().equals("admin")) response.sendRedirect("admin");
                      else{
