@@ -36,7 +36,7 @@
                 <a class="nav-link" href="login">Dang Nhap</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Dang Ky</a>
+                <a class="nav-link" href="register">Dang Ky</a>
             </li>
             </c:if>
             <c:if test="${user!=null}">

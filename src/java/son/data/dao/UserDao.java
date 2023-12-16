@@ -11,5 +11,7 @@ import son.data.model.User;
  * @author LENOVO
  */
 public interface UserDao {
-    public User findUser(String email,String phone);
+    public User findUser(String email,String password);
+    public User findUser(String email);
+    public void insertUser(String name,String email,String password);
 }

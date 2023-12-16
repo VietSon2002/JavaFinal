@@ -5,7 +5,7 @@
         <div class="card shadow-2-strong" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
               <form action="" method="post">
-            <h3 class="mb-5 text-start">Sign in</h3>
+            <h3 class="mb-3 text-start">Sign in</h3>
             <h1 style="padding: 10px 0 10px 0;">
                 <div class="link-danger">${error_login}</div></h1>
             <div class="mb-4 text-start">
@@ -32,6 +32,8 @@
               <button class="btn btn-primary btn-lg" style="background-color: #3b5998;" type="submit">
                 <i class="fab fa-facebook-f me-2"></i>Sign in with Facebook
               </button>
+              <p class="text-center text-muted mt-5 mb-0">Dont have an account? <a href="register"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
             </div>
             </form>
           </div>

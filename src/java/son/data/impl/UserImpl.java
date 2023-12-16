@@ -34,4 +34,38 @@ public class UserImpl implements UserDao {
         }
         return null;
     }
+
+    @Override
+    public User findUser(String email) {
+            String sql = null;
+            if(email.contains("@"))sql="select * from users where email='"+email+"'";
+            try {
+                PreparedStatement sttm = con.prepareStatement(sql);
+                ResultSet rs = sttm.executeQuery();
+                if(rs.next()) return  new User(rs);
+            } catch (SQLException ex) {
+            Logger.getLogger(UserImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    @Override
+public void insertUser(String name, String email, String password) {
+    String sql = "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, '')";
+    try {
+        PreparedStatement sttm = con.prepareStatement(sql);
+        sttm.setString(1, name);
+        sttm.setString(2, email);
+        sttm.setString(3, password);
+        int rowsAffected = sttm.executeUpdate();
+
+        if (rowsAffected > 0) {
+            System.out.println("Dữ liệu đã được thêm vào cơ sở dữ liệu.");
+        } else {
+            System.out.println("Không có dữ liệu nào được thêm vào cơ sở dữ liệu.");
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
 }
