@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package son.data.web;
 
 import java.io.IOException;
@@ -32,4 +28,4 @@ public class HomeServlet extends HttpServlet {
        request.setAttribute("title", "Trang chu");
        request.getRequestDispatcher("./views/home.jsp").include(request, response);    
         }
-    }
+}

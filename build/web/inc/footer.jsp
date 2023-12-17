@@ -33,7 +33,7 @@
                         <p>Nh?n c?p nh?t qua E-mail v? c?a hàng m?i nh?t và các ?u ?ãi ??c bi?t c?a chúng tôi.</p>
                         <form action="#">
                             <input type="text" placeholder="Nh?p ??a ch? email c?a b?n">
-                            <button type="submit" class="site-btn">??ng Ký</button>
+                            <button type="submit" class="site-btn">??ng ký ?</button>
                         </form>
                         <div class="footer__widget__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>

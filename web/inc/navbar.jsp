@@ -1,4 +1,5 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="son.utils.API" %>
 <nav class="navbar navbar-expand-lg navbar-light bg-info sticky-top">
     <a class="navbar-brand" href="#">
         <img src="./assets/icon/logo.png" width="100" height="100" alt="Logo">
@@ -11,15 +12,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto" style="margin: 0 auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/FoodShop/home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/FoodShop/home">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#"role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    Danh M?c
+                    Danh Muc
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <c:forEach items="${listCategory}" var="category">
@@ -29,16 +30,39 @@
                     </c:forEach>
                 </div>
             </li>
+            <c:if test="${user==null}">
             <li class="nav-item">
-                <a class="nav-link" href="#">??ng nh?p</a>
+                <a class="nav-link" href="login">Dang Nhap</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">??ng ký</a>
+                <a class="nav-link" href="register">Dang Ky</a>
             </li>
+            </c:if>
+            <c:if test="${user!=null}">
+                <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Xin Chao <c:set var="s" value="${user.getName()}"></c:set>
+                        <% String name = (String)pageContext.getAttribute("s");
+                                        out.print(API.getName(name));
+                                    %>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="./views/logout.jsp">Logout</a></li>
+                    </ul>
+                </li>
+            </c:if>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="
+                   <c:if test="${user==null}">
+                        login
+                    </c:if>
+                    <c:if test="${user!=null}">
+                        home?id_product=${product.id}
+                    </c:if>
+                   ">
                     <img src="./assets/icon/cart.png" width="25" height="25" alt="Gi? hàng"/>
-                    <i>Gi? hàng</i>
+                    <i>${cart.size()}</i>
                 </a>
             </li>
         </ul>

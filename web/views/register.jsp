@@ -1,17 +1,4 @@
-<%-- 
-    Document   : register
-    Created on : Dec 16, 2023, 3:43:18 PM
-    Author     : LENOVO
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World! con cak</h1>
-    </body>
-</html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:import url="./inc/header.jsp"/>
+<c:import url="./inc/navbar.jsp"/>
+<c:import url="./inc/_register.jsp"/>

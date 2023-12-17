@@ -17,6 +17,7 @@ public class Product {
     String name;
     String image;
     double price;
+    int quantity;
 
     public Product(int id, int id_category, String name, String image, double price) {
         this.id = id;
@@ -31,6 +32,7 @@ public class Product {
         this.name = rs.getString("name");
         this.image = rs.getString("image");
         this.price = rs.getDouble("price");
+        this.quantity = 0;
     }
 
     public int getId() {
@@ -71,6 +73,13 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }  
+    
+    public int getQuantity() {
+        return quantity;
     }
-        
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }
