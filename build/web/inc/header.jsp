@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6e5g2F9HiqheHUHf3LIxXuBb6juzeMVSxTJcAXPyRrQZ8jWMb5PaPDoF3xyWUOV2n5X5hK5CPL1cEAzG0yOO5w==" crossorigin="anonymous" />
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .container {
             margin-top: 50px;
@@ -59,6 +59,17 @@
         .product__item__text {
             padding: 10px;
             text-align: center;
+        }
+        .product__item__pic__hover {
+            display: flex;
+            padding: 10px;
+            margin-top: 100px;
+        }
+
+        .product__item__pic__hover a {
+            text-decoration: none;
+            color: #0DCAF0;
+            margin-right: 10px; /* T?ng kho?ng cách gi?a các bi?u t??ng */
         }
     </style>
 <body>

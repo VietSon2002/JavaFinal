@@ -4,6 +4,9 @@
  */
 package son.data.model;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  *
  * @author LENOVO
@@ -21,6 +24,13 @@ public class Product {
         this.name = name;
         this.image = image;
         this.price = price;
+    }
+    
+    public Product(ResultSet rs) throws SQLException {
+        this.id = rs.getInt("id");
+        this.name = rs.getString("name");
+        this.image = rs.getString("image");
+        this.price = rs.getDouble("price");
     }
 
     public int getId() {

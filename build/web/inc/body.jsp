@@ -13,12 +13,22 @@
                             <div class="product__item">
                                 <div class="product__item__pic">
                                     <img src="./assets/images/${product.image}" alt="${product.name}" />
-                                            <li><a href="#">Mua<i class="fa fa-retweet"></i></a></li>
+                                    <div class="product__item__pic__hover">
+                                        <a href="
+                                           <c:if test="${user==null}">
+                                               login
+                                           </c:if>
+                                            <c:if test="${user!=null}">
+                                               home?id_product=${product.id} & id_category=${category.id}
+                                           </c:if>
+                                           "><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="#"><i class="fa fa-retweet"></i></a>
+                                        <a href="#"><i class="fa fa-heart"></i></a>
+                                    </div>
                                 </div>
                                 <div class="product__item__text">
                                     <h6>${product.name}</h6>
                                     <h5>${product.price}00 VND</h5>
-                                    <div class="product__item__heart"><i class="fa fa-heart"></i></div>
                                 </div>
                             </div>
                         </div>

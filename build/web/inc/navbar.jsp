@@ -54,9 +54,16 @@
                 </li>
             </c:if>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="
+                   <c:if test="${user==null}">
+                        login
+                    </c:if>
+                    <c:if test="${user!=null}">
+                        home?id_product=${product.id}
+                    </c:if>
+                   ">
                     <img src="./assets/icon/cart.png" width="25" height="25" alt="Gi? hàng"/>
-                    <i>Gio Hang</i>
+                    <i>${cart.size()}</i>
                 </a>
             </li>
         </ul>
