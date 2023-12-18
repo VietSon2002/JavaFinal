@@ -19,7 +19,7 @@
             </li>
             <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Category
+            Danh Muc
           </a>
           <ul class="dropdown-menu">
               <c:forEach items="${listCategory}" var="category">
@@ -44,8 +44,8 @@
                                     %>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="./views/logout.jsp">Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Ca Nhan</a></li>
+                        <li><a class="dropdown-item" href="./views/logout.jsp">Dang Xuat</a></li>
                     </ul>
                 </li>
             </c:if>
@@ -56,10 +56,12 @@
                     </c:if>
                     <c:if test="${user!=null}">
                         home?id_product=${product.id}
-                    </c:if>
-                   ">
-                    <img src="./assets/icon/cart.png" width="25" height="25" alt="Gi? hàng"/>
-                    <i>${cart.size()}</i>
+                    </li>
+                    </c:if>"></a>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="cart">
+                            <img src="./assets/icon/cart.png" width="25" height="25" />
+                            <i>${cart.size()}</i>  
                 </a>
             </li>
         </ul>

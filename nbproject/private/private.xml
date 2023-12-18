@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/dao/ProductDao.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/web/Login.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/web/Register.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/web/Cart.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/web/inc/_cart.jsp</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/web/inc/navbar.jsp</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/web/views/cart.jsp</file>
             <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/web/HomeServlet.java</file>
-            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/impl/ProductImpl.java</file>
-            <file>file:/D:/Code/Javanangcao/JavaFinal/web/inc/body.jsp</file>
         </group>
     </open-files>
 </project-private>
