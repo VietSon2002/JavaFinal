@@ -18,17 +18,14 @@
                 <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#"role="button" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Danh Muc
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <c:forEach items="${listCategory}" var="category">
-                        <a class="dropdown-item" href="/FoodShop/category?categoryId=${category.id}">
-                            ${category.name}
-                        </a><br>
-                    </c:forEach>
-                </div>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </a>
+          <ul class="dropdown-menu">
+              <c:forEach items="${listCategory}" var="category">
+                  <li><a class="dropdown-item" href="./home?id_category=${category.id}">${category.name}</a></li>
+             </c:forEach>                   
+          </ul>         
             </li>
             <c:if test="${user==null}">
             <li class="nav-item">

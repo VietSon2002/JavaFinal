@@ -3,19 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Code/Javanangcao/FoodShop/src/java/son/data/web/Register.java</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/views/register.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/inc/_login.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/inc/body.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/views/home.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/inc/footer.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/inc/navbar.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/views/logout.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/views/login.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/src/java/son/data/web/Login.java</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/inc/_register.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/web/inc/header.jsp</file>
-            <file>file:/D:/Code/Javanangcao/FoodShop/src/java/son/data/web/HomeServlet.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/dao/ProductDao.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/web/HomeServlet.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/src/java/son/data/impl/ProductImpl.java</file>
+            <file>file:/D:/Code/Javanangcao/JavaFinal/web/inc/body.jsp</file>
         </group>
     </open-files>
 </project-private>

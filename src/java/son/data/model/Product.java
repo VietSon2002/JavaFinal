@@ -32,7 +32,7 @@ public class Product {
         this.name = rs.getString("name");
         this.image = rs.getString("image");
         this.price = rs.getDouble("price");
-        this.quantity = 0;
+        this.quantity = 1;
     }
 
     public int getId() {
