@@ -7,10 +7,6 @@ package son.data.dao;
 import java.util.List;
 import son.data.model.Product;
 
-/**
- *
- * @author LENOVO
- */
 public interface ProductDao {
     public List<Product> findAll();
     public Product findProduct(int id_product);

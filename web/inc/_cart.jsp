@@ -157,19 +157,33 @@ a:hover{
                     </div>
                     <c:set var ="total" value="0"></c:set>      
                     <c:forEach items="${cart}" var="product">
-                        <div class="row border-top border-bottom">
-                        <div class="row main align-items-center">
-                            <div class="col-2"><img class="img-fluid" src="./assets/images/${product.image}"></div>
-                            <div class="col">
-                                <div class="row">${product.name}</div>
+                            <div class="row border-top border-bottom" style="width: 560px; margin-bottom: 10px;">
+                                <form action="cart" method="post" class="w-100">
+                                    <input type="hidden" name="id_product" value="${product.id}">
+                                    <div class="card-body p-2">
+                                        <div class="row main align-items-center">
+                                            <div class="col-3 col-md-2">
+                                                <img src="./assets/images/${product.image}" class="img-fluid rounded-3" alt="Shopping item">
+                                            </div>
+                                            <div class="col-auto col-md-3">
+                                                <div class="row mb-1">${product.name}</div>
+                                                <div class="row">
+                                                    <input type="text" name="quantity" value="${product.quantity}" style="width: 38px; text-align: right;">
+                                                    <button type="submit" class="text-left fa" name="action" value="update" style="color: black; background-color: white; font-size: 14px; border: none; padding: 0;">&#xf021;</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto col-md-3 mt-1 mt-md-0">
+                                                ${product.price}00 VND
+                                            </div>
+                                            <div class="col-auto col-md-2 mt-1 mt-md-0">
+                                                <span class="close">
+                                                    <button type="submit" class="btn btn-link" name="action" value="delete" style="color: black; background-color: white; font-size: 14px; border: none; padding: 0;">&#10005;</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="col">
-                                <a href="#">-</a><a href="#" class="border">${product.quantity}</a><a href="#">+</a>
-                            </div>
-                            <div class="col">${product.price}00 VND
-                                <span class="close">&#10005;</span></div>
-                        </div>
-                    </div>
                     <c:set var ="total" value="${total+ product.quantity*product.price}"></c:set> 
                     </c:forEach>
                     <div class="back-to-shop"><a href="home">&leftarrow;</a><span class="text-muted">Continue Shopping</span></div>
@@ -178,12 +192,12 @@ a:hover{
                     <div><h5><b>Summary</b></h5></div>
                     <hr>
                     <div class="row">
-                        <div class="col" style="padding-left:0;">ITEMS 3</div>
+                        <div class="col" style="padding-left:0;">ITEMS ${cart.size()}</div>
                         <div class="col text-right">${total}00 VND</div>
                     </div>
                     <form>
                         <p>SHIPPING</p>
-                        <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                        <select><option class="text-muted">Standard-Delivery - 5.000 VND</option></select>
                         <p>GIVE CODE</p>
                         <input id="code" placeholder="Enter your code">
                     </form>
