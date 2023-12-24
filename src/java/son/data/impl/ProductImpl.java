@@ -38,9 +38,9 @@ public class ProductImpl implements ProductDao {
 
     @Override
     public Product findProduct(int id_product) {
-        String sql = "select * from products where id="+id_product;
-        try (
-            PreparedStatement sttm = con.prepareStatement(sql)) {
+        String sql = "SELECT * FROM products WHERE id=?";
+        try (PreparedStatement sttm = con.prepareStatement(sql)) {
+            sttm.setInt(1, id_product);
             ResultSet rs = sttm.executeQuery();
             if (rs.next()) return new Product(rs);
         } catch (SQLException ex) {
@@ -48,5 +48,44 @@ public class ProductImpl implements ProductDao {
         }
         return null;
     }
-    
+
+    @Override
+    public void addProduct(Product product) {
+        String sql = "INSERT INTO products (id_category, name, image, price) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement sttm = con.prepareStatement(sql)) {
+            sttm.setInt(1, product.getId_category());
+            sttm.setString(2, product.getName());
+            sttm.setString(3, product.getImage());
+            sttm.setDouble(4, product.getPrice());
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void editProduct(Product product) {
+        String sql = "UPDATE products SET id_category=?, name=?, image=?, price=? WHERE id=?";
+        try (PreparedStatement sttm = con.prepareStatement(sql)) {
+            sttm.setInt(1, product.getId_category());
+            sttm.setString(2, product.getName());
+            sttm.setString(3, product.getImage());
+            sttm.setDouble(4, product.getPrice());
+            sttm.setInt(5, product.getId());
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void deleteProduct(int id) {
+        String sql = "DELETE FROM products WHERE id=?";
+        try (PreparedStatement sttm = con.prepareStatement(sql)) {
+            sttm.setInt(1, id);
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
