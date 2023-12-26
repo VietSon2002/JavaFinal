@@ -59,6 +59,7 @@ public class ProductImpl implements ProductDao {
             sttm.setDouble(4, product.getPrice());
             sttm.executeUpdate();
         } catch (SQLException ex) {
+            ex.printStackTrace();
             Logger.getLogger(ProductImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

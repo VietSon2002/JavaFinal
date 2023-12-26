@@ -20,6 +20,10 @@
         <servlet-name>Admin</servlet-name>
         <servlet-class>son.data.web.Admin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminAdd</servlet-name>
+        <servlet-class>son.data.web.AdminAdd</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>Admin</servlet-name>
         <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminAdd</servlet-name>
+        <url-pattern>/AdminAdd</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

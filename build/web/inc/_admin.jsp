@@ -29,14 +29,36 @@
         form {
             margin: 10px;
         }
+
+        /* Hiển thị form mặc định khi trang được tải */
+        #addProductForm {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
 <h2>Admin Page</h2>
 
-<%-- Nút thêm sản phẩm và mẫu form thêm sản phẩm --%>
-<button onclick="location.href='admin?action=addProductForm'">Thêm Sản Phẩm</button>
+<%-- Mẫu form thêm sản phẩm --%>
+<div id="addProductForm">
+    <h3>Thêm Sản Phẩm</h3>
+    <form action="admin" value="add" method="post">
+        <label for="name">Tên sản phẩm:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="image">Đường dẫn ảnh:</label>
+        <input type="text" name="image" required><br>
+
+        <label for="price">Giá:</label>
+        <input type="text" name="price" required><br>
+
+        <label for="id_category">ID Category:</label>
+        <input type="text" name="id_category" required><br>
+
+        <button type="submit">Thêm Sản Phẩm</button>
+    </form>
+</div>
 
 <%-- Danh sách sản phẩm và nút sửa, xóa --%>
 <table>
@@ -60,7 +82,7 @@
             <td>${product.id_category}</td>
             <td>
                 <a href="admin?action=editProduct&id=${product.id}">Sửa</a>
-                <a href="admin?action=deleteProduct&id=${product.id}" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không?')">Xóa</a>
+                <a href="admin?action=delete&id=${product.id}" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không?')">Xóa</a>
             </td>
         </tr>
     </c:forEach>
